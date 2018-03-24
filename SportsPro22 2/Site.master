@@ -1,0 +1,106 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/site.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <form id="form1" runat="server" class="form-horizontal ">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" 
+                            data-toggle="collapse" data-target="#mainMenu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/Default">SportsPro</a>
+                </div>
+                <div class="collapse navbar-collapse" id="mainMenu">
+                    <ul class="nav navbar-nav">
+                        <li runat="server" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Customer Support&nbsp;<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                       <li><a href="/ProductRegistration">Register products</a></li>
+                       <li><a href="/CustomerSurvey">Complete Customer Survey</a></li>
+
+
+                                </ul>
+                            </li>
+
+                        <li runat="server" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Technician Support&nbsp;<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                         <li><a href="/CustomerIncidentDisplay">Display Customer Incidents</a></li>
+                                <li><a href="/IncidentUpdate">Update Incidents</a></li>
+
+                                </ul>
+                            </li>
+                        
+                       
+                        <li runat="server" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Administration&nbsp;<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/administration/ProductMaintainance">Maintain products</a></li>
+                                <li><a href="/administration/CustomerMaintainance">Maintain Customers</a></li>
+                                <li><a href="/administration/TechnicianMaintainance">Maintain Techinicians</a></li>
+                                <li><a href="/administration/IncidentDisplay">Display Incidents</a></li>
+                                <li><a href="/administration/CustomerDisplay">Display Customers</a></li>
+                                <li><a href="/administration/TechinicianIncidentSummary">Display incidents by technician</a></li>
+                            </ul>
+                        </li>
+                       <li> <a href="/administration/ContactDisplay"></a></li>
+                         <li><a href="/ContactUs">Contact Us</a></li>
+                        <li><a href="/SurveyComplete"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+         <header>
+             <div class ="jumbotron container body-content">
+        <div class ="col-md-12">
+            <h2>SportsPro</h2>
+            <p>Sports management software for the sports enthusiast</p>
+        </div>
+                 </div>
+            </header>
+        
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            
+            </asp:ContentPlaceHolder>
+
+            <hr />
+            </div>
+           
+
+            <footer>
+                <div class="jumbotron container body-content">
+                 <div class="col-md-12">
+                
+                    
+                <p>To contact us, call us at 800-555-0400 or email us at <a href="mailto:sportspro@sportsprosoftware.com">sportspro@sportsprosoftware.com</a></p>
+        </div>
+                    </div>
+                         </footer>
+               
+        </div>
+    </form>
+</body>
+</html>
